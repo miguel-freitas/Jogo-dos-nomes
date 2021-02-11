@@ -1,0 +1,1261 @@
+[gd_scene load_steps=42 format=2]
+
+[ext_resource path="res://figures/btn-normalCORRIGIDO.png" type="Texture" id=1]
+[ext_resource path="res://figures/btn-voltar.png" type="Texture" id=2]
+[ext_resource path="res://figures/btn-normal-hoverCORRIGIDO.png" type="Texture" id=3]
+[ext_resource path="res://fundos/menu-limpo-01.png" type="Texture" id=4]
+[ext_resource path="res://figures/btn-dificil-hoverCORRIGIDO.png" type="Texture" id=5]
+[ext_resource path="res://figures/Ícone-Engrenagem-PNG.png" type="Texture" id=6]
+[ext_resource path="res://figures/botao-sairCORRIGIDO (1).png" type="Texture" id=7]
+[ext_resource path="res://figures/botao-jogarCORRIGIDO (1).png" type="Texture" id=8]
+[ext_resource path="res://figures/botao-sair-hoverCORRIGIDO.png" type="Texture" id=9]
+[ext_resource path="res://figures/botao-jogar-corrigido.png" type="Texture" id=10]
+[ext_resource path="res://fundos/dificuldade-limpo-01.png" type="Texture" id=11]
+[ext_resource path="res://figures/btn-dificilCORRIGIDO.png" type="Texture" id=12]
+[ext_resource path="res://Main.gd" type="Script" id=13]
+[ext_resource path="res://Level3Dificil.gd" type="Script" id=14]
+[ext_resource path="res://ButtonNormal2.gd" type="Script" id=15]
+[ext_resource path="res://letras/letraL.png" type="Texture" id=16]
+[ext_resource path="res://letras/letraA.png" type="Texture" id=17]
+[ext_resource path="res://fundos/M1-NORMAL-IMP-01.png" type="Texture" id=18]
+[ext_resource path="res://letras/letraE.png" type="Texture" id=19]
+[ext_resource path="res://letras/letraO.png" type="Texture" id=20]
+[ext_resource path="res://letras/letraP.png" type="Texture" id=21]
+[ext_resource path="res://letras/letraD.png" type="Texture" id=22]
+[ext_resource path="res://letras/letraR.png" type="Texture" id=23]
+[ext_resource path="res://fundos/M1-DIFICIL-IMP-01.png" type="Texture" id=24]
+[ext_resource path="res://fundos/M2-N-IMP-01.png" type="Texture" id=25]
+[ext_resource path="res://letras/letraZ.png" type="Texture" id=26]
+[ext_resource path="res://letras/letraC.png" type="Texture" id=27]
+[ext_resource path="res://fundos/M2-H-IMP-01.png" type="Texture" id=28]
+[ext_resource path="res://letras/letraT.png" type="Texture" id=29]
+[ext_resource path="res://letras/letraM.png" type="Texture" id=30]
+[ext_resource path="res://fundos/M3-NORMAL-IMPLEMENTACAO-01.png" type="Texture" id=31]
+[ext_resource path="res://letras/letraJ.png" type="Texture" id=32]
+[ext_resource path="res://letras/letraV.png" type="Texture" id=33]
+[ext_resource path="res://fundos/modelo2-DIFICIL-IMPLEMENT-01.png" type="Texture" id=34]
+[ext_resource path="res://Level1Dificil.gd" type="Script" id=35]
+[ext_resource path="res://Level1.gd" type="Script" id=36]
+[ext_resource path="res://Level2.gd" type="Script" id=37]
+[ext_resource path="res://Level2Dificil.gd" type="Script" id=38]
+[ext_resource path="res://Level3.gd" type="Script" id=39]
+[ext_resource path="res://letras/direita.png" type="Texture" id=40]
+[ext_resource path="res://fundos/cenafinal-01.png" type="Texture" id=41]
+
+[node name="Main" type="Node"]
+script = ExtResource( 13 )
+
+[node name="MainMenu" type="Control" parent="."]
+margin_right = 1000.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackGroundImage" type="NinePatchRect" parent="MainMenu"]
+margin_left = 14.0
+margin_top = 16.0
+margin_right = 974.0
+margin_bottom = 576.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonStart" type="TextureButton" parent="MainMenu/BackGroundImage"]
+margin_left = 328.0
+margin_top = 302.0
+margin_right = 668.0
+margin_bottom = 400.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonOptions" type="TextureButton" parent="MainMenu/BackGroundImage"]
+margin_left = 837.0
+margin_top = 8.0
+margin_right = 939.0
+margin_bottom = 102.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonSair" type="TextureButton" parent="MainMenu/BackGroundImage"]
+margin_left = 398.0
+margin_top = 456.0
+margin_right = 598.0
+margin_bottom = 540.0
+texture_normal = ExtResource( 7 )
+texture_hover = ExtResource( 9 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MapScene" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackGroundImage2" type="NinePatchRect" parent="MapScene"]
+margin_left = 14.0
+margin_top = 16.0
+margin_right = 974.0
+margin_bottom = 576.0
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal" type="TextureButton" parent="MapScene/BackGroundImage2"]
+margin_left = 209.0
+margin_top = 184.0
+margin_right = 784.0
+margin_bottom = 295.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 1 )
+texture_hover = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonOptions" type="TextureButton" parent="MapScene/BackGroundImage2"]
+margin_left = 837.0
+margin_top = 8.0
+margin_right = 939.0
+margin_bottom = 102.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonDificil" type="TextureButton" parent="MapScene/BackGroundImage2"]
+margin_left = 264.0
+margin_top = 325.0
+margin_right = 729.0
+margin_bottom = 423.0
+texture_normal = ExtResource( 12 )
+texture_hover = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonBack" type="TextureButton" parent="MapScene/BackGroundImage2"]
+margin_left = 432.595
+margin_top = 455.238
+margin_right = 541.595
+margin_bottom = 540.238
+texture_normal = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelScene" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level1" type="NinePatchRect" parent="LevelScene"]
+visible = false
+margin_left = 12.0
+margin_top = 14.0
+margin_right = 972.0
+margin_bottom = 574.0
+texture = ExtResource( 18 )
+script = ExtResource( 36 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal" type="TextureButton" parent="LevelScene/Level1"]
+margin_left = 155.0
+margin_top = 90.0
+margin_right = 222.0
+margin_bottom = 159.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal2" type="TextureButton" parent="LevelScene/Level1"]
+margin_left = 261.0
+margin_top = 92.0
+margin_right = 328.0
+margin_bottom = 161.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 22 )
+expand = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal22" type="TextureButton" parent="LevelScene/Level1"]
+visible = false
+margin_left = 238.0
+margin_top = 430.0
+margin_right = 325.0
+margin_bottom = 517.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 22 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal3" type="TextureButton" parent="LevelScene/Level1"]
+margin_left = 373.0
+margin_top = 90.0
+margin_right = 440.0
+margin_bottom = 159.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 19 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal33" type="TextureButton" parent="LevelScene/Level1"]
+visible = false
+margin_left = 415.0
+margin_top = 256.0
+margin_right = 502.0
+margin_bottom = 331.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 19 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal4" type="TextureButton" parent="LevelScene/Level1"]
+margin_left = 477.0
+margin_top = 92.0
+margin_right = 544.0
+margin_bottom = 161.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal44" type="TextureButton" parent="LevelScene/Level1"]
+visible = false
+margin_left = 513.0
+margin_top = 342.0
+margin_right = 592.0
+margin_bottom = 421.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal5" type="TextureButton" parent="LevelScene/Level1"]
+margin_left = 585.0
+margin_top = 94.0
+margin_right = 652.0
+margin_bottom = 163.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 20 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal6" type="TextureButton" parent="LevelScene/Level1"]
+margin_left = 707.0
+margin_top = 92.0
+margin_right = 774.0
+margin_bottom = 161.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 21 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="next" type="TextureButton" parent="LevelScene/Level1"]
+margin_left = 838.0
+margin_top = 472.0
+margin_right = 932.0
+margin_bottom = 546.0
+texture_normal = ExtResource( 40 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level1Dificil" type="NinePatchRect" parent="LevelScene"]
+visible = false
+margin_left = 12.0
+margin_top = 14.0
+margin_right = 972.0
+margin_bottom = 574.0
+texture = ExtResource( 24 )
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="next2" type="TextureButton" parent="LevelScene/Level1Dificil"]
+margin_left = 838.0
+margin_top = 472.0
+margin_right = 932.0
+margin_bottom = 546.0
+texture_normal = ExtResource( 40 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DButtonNormal" type="TextureButton" parent="LevelScene/Level1Dificil"]
+margin_left = 155.0
+margin_top = 87.0
+margin_right = 222.0
+margin_bottom = 156.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DButtonNormal12" type="TextureButton" parent="LevelScene/Level1Dificil"]
+visible = false
+margin_left = 61.0
+margin_top = 248.0
+margin_right = 146.0
+margin_bottom = 341.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DButtonNormal2" type="TextureButton" parent="LevelScene/Level1Dificil"]
+margin_left = 247.0
+margin_top = 88.0
+margin_right = 314.0
+margin_bottom = 157.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 22 )
+expand = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DButtonNormal22" type="TextureButton" parent="LevelScene/Level1Dificil"]
+visible = false
+margin_left = 238.0
+margin_top = 430.0
+margin_right = 325.0
+margin_bottom = 517.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 22 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DButtonNormal3" type="TextureButton" parent="LevelScene/Level1Dificil"]
+margin_left = 335.0
+margin_top = 88.0
+margin_right = 402.0
+margin_bottom = 157.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 19 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DButtonNormal33" type="TextureButton" parent="LevelScene/Level1Dificil"]
+visible = false
+margin_left = 415.0
+margin_top = 256.0
+margin_right = 502.0
+margin_bottom = 331.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 19 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DButtonNormal4" type="TextureButton" parent="LevelScene/Level1Dificil"]
+margin_left = 421.0
+margin_top = 86.0
+margin_right = 488.0
+margin_bottom = 155.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DButtonNormal44" type="TextureButton" parent="LevelScene/Level1Dificil"]
+visible = false
+margin_left = 513.0
+margin_top = 342.0
+margin_right = 592.0
+margin_bottom = 421.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DButtonNormal5" type="TextureButton" parent="LevelScene/Level1Dificil"]
+margin_left = 515.0
+margin_top = 86.0
+margin_right = 582.0
+margin_bottom = 155.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 20 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DButtonNormal6" type="TextureButton" parent="LevelScene/Level1Dificil"]
+margin_left = 601.0
+margin_top = 87.0
+margin_right = 670.0
+margin_bottom = 158.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 21 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DButtonNormal7" type="TextureButton" parent="LevelScene/Level1Dificil"]
+margin_left = 693.0
+margin_top = 88.0
+margin_right = 760.0
+margin_bottom = 157.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 23 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DButtonNormal72" type="TextureButton" parent="LevelScene/Level1Dificil"]
+visible = false
+margin_left = 329.0
+margin_top = 432.0
+margin_right = 410.0
+margin_bottom = 517.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 23 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level2" type="NinePatchRect" parent="LevelScene"]
+visible = false
+margin_left = 12.0
+margin_top = 14.0
+margin_right = 972.0
+margin_bottom = 574.0
+texture = ExtResource( 25 )
+script = ExtResource( 37 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="next3" type="TextureButton" parent="LevelScene/Level2"]
+margin_left = 838.0
+margin_top = 472.0
+margin_right = 932.0
+margin_bottom = 546.0
+texture_normal = ExtResource( 40 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal" type="TextureButton" parent="LevelScene/Level2"]
+margin_left = 155.0
+margin_top = 87.0
+margin_right = 222.0
+margin_bottom = 156.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 27 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal12" type="TextureButton" parent="LevelScene/Level2"]
+visible = false
+margin_left = 235.0
+margin_top = 424.0
+margin_right = 320.0
+margin_bottom = 517.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 27 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal2" type="TextureButton" parent="LevelScene/Level2"]
+margin_left = 247.0
+margin_top = 88.0
+margin_right = 314.0
+margin_bottom = 157.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 22 )
+expand = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal3" type="TextureButton" parent="LevelScene/Level2"]
+margin_left = 335.0
+margin_top = 88.0
+margin_right = 402.0
+margin_bottom = 157.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 19 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal33" type="TextureButton" parent="LevelScene/Level2"]
+visible = false
+margin_left = 55.0
+margin_top = 338.0
+margin_right = 150.0
+margin_bottom = 423.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 19 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal4" type="TextureButton" parent="LevelScene/Level2"]
+margin_left = 421.0
+margin_top = 88.0
+margin_right = 488.0
+margin_bottom = 157.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal6" type="TextureButton" parent="LevelScene/Level2"]
+margin_left = 511.0
+margin_top = 87.0
+margin_right = 580.0
+margin_bottom = 158.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal7" type="TextureButton" parent="LevelScene/Level2"]
+margin_left = 609.0
+margin_top = 88.0
+margin_right = 676.0
+margin_bottom = 157.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 26 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal72" type="TextureButton" parent="LevelScene/Level2"]
+visible = false
+margin_left = 599.0
+margin_top = 252.0
+margin_right = 680.0
+margin_bottom = 337.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 26 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level2Dificil" type="NinePatchRect" parent="LevelScene"]
+visible = false
+margin_left = 12.0
+margin_top = 14.0
+margin_right = 972.0
+margin_bottom = 574.0
+texture = ExtResource( 28 )
+script = ExtResource( 38 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="next4" type="TextureButton" parent="LevelScene/Level2Dificil"]
+margin_left = 838.0
+margin_top = 472.0
+margin_right = 932.0
+margin_bottom = 546.0
+texture_normal = ExtResource( 40 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal" type="TextureButton" parent="LevelScene/Level2Dificil"]
+margin_left = 155.0
+margin_top = 87.0
+margin_right = 222.0
+margin_bottom = 156.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 27 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal12" type="TextureButton" parent="LevelScene/Level2Dificil"]
+visible = false
+margin_left = 235.0
+margin_top = 424.0
+margin_right = 320.0
+margin_bottom = 517.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 27 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal2" type="TextureButton" parent="LevelScene/Level2Dificil"]
+margin_left = 247.0
+margin_top = 88.0
+margin_right = 314.0
+margin_bottom = 157.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 22 )
+expand = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal3" type="TextureButton" parent="LevelScene/Level2Dificil"]
+margin_left = 335.0
+margin_top = 88.0
+margin_right = 402.0
+margin_bottom = 157.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 19 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal33" type="TextureButton" parent="LevelScene/Level2Dificil"]
+visible = false
+margin_left = 55.0
+margin_top = 338.0
+margin_right = 150.0
+margin_bottom = 423.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 19 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal4" type="TextureButton" parent="LevelScene/Level2Dificil"]
+margin_left = 421.0
+margin_top = 88.0
+margin_right = 488.0
+margin_bottom = 157.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal6" type="TextureButton" parent="LevelScene/Level2Dificil"]
+margin_left = 511.0
+margin_top = 87.0
+margin_right = 580.0
+margin_bottom = 158.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal62" type="TextureButton" parent="LevelScene/Level2Dificil"]
+visible = false
+margin_left = 597.0
+margin_top = 431.0
+margin_right = 686.0
+margin_bottom = 512.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal8" type="TextureButton" parent="LevelScene/Level2Dificil"]
+margin_left = 707.0
+margin_top = 89.0
+margin_right = 776.0
+margin_bottom = 160.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 29 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal82" type="TextureButton" parent="LevelScene/Level2Dificil"]
+visible = false
+margin_left = 331.0
+margin_top = 249.0
+margin_right = 416.0
+margin_bottom = 336.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 29 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal7" type="TextureButton" parent="LevelScene/Level2Dificil"]
+margin_left = 609.0
+margin_top = 88.0
+margin_right = 676.0
+margin_bottom = 157.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 26 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal72" type="TextureButton" parent="LevelScene/Level2Dificil"]
+visible = false
+margin_left = 599.0
+margin_top = 252.0
+margin_right = 680.0
+margin_bottom = 337.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 26 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level3" type="NinePatchRect" parent="LevelScene"]
+visible = false
+margin_left = 12.0
+margin_top = 14.0
+margin_right = 972.0
+margin_bottom = 574.0
+texture = ExtResource( 31 )
+script = ExtResource( 39 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="next5" type="TextureButton" parent="LevelScene/Level3"]
+margin_left = 838.0
+margin_top = 472.0
+margin_right = 932.0
+margin_bottom = 546.0
+texture_normal = ExtResource( 40 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal" type="TextureButton" parent="LevelScene/Level3"]
+margin_left = 155.0
+margin_top = 85.0
+margin_right = 222.0
+margin_bottom = 154.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 20 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal12" type="TextureButton" parent="LevelScene/Level3"]
+visible = false
+margin_left = 235.0
+margin_top = 424.0
+margin_right = 320.0
+margin_bottom = 517.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 20 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal2" type="TextureButton" parent="LevelScene/Level3"]
+margin_left = 249.0
+margin_top = 86.0
+margin_right = 316.0
+margin_bottom = 155.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 22 )
+expand = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal3" type="TextureButton" parent="LevelScene/Level3"]
+margin_left = 337.0
+margin_top = 88.0
+margin_right = 404.0
+margin_bottom = 157.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal33" type="TextureButton" parent="LevelScene/Level3"]
+visible = false
+margin_left = 55.0
+margin_top = 338.0
+margin_right = 150.0
+margin_bottom = 423.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal4" type="TextureButton" parent="LevelScene/Level3"]
+margin_left = 421.0
+margin_top = 88.0
+margin_right = 488.0
+margin_bottom = 157.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 30 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal6" type="TextureButton" parent="LevelScene/Level3"]
+margin_left = 511.0
+margin_top = 87.0
+margin_right = 580.0
+margin_bottom = 158.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal8" type="TextureButton" parent="LevelScene/Level3"]
+margin_left = 707.0
+margin_top = 85.0
+margin_right = 776.0
+margin_bottom = 156.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 33 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal82" type="TextureButton" parent="LevelScene/Level3"]
+visible = false
+margin_left = 331.0
+margin_top = 249.0
+margin_right = 416.0
+margin_bottom = 336.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 33 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal7" type="TextureButton" parent="LevelScene/Level3"]
+margin_left = 613.0
+margin_top = 88.0
+margin_right = 680.0
+margin_bottom = 157.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 32 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level3Dificil" type="NinePatchRect" parent="LevelScene"]
+visible = false
+margin_left = 12.0
+margin_top = 14.0
+margin_right = 972.0
+margin_bottom = 574.0
+texture = ExtResource( 34 )
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="next6" type="TextureButton" parent="LevelScene/Level3Dificil"]
+margin_left = 838.0
+margin_top = 468.0
+margin_right = 932.0
+margin_bottom = 542.0
+texture_normal = ExtResource( 40 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal" type="TextureButton" parent="LevelScene/Level3Dificil"]
+margin_left = 155.0
+margin_top = 85.0
+margin_right = 222.0
+margin_bottom = 154.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 20 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal12" type="TextureButton" parent="LevelScene/Level3Dificil"]
+visible = false
+margin_left = 235.0
+margin_top = 424.0
+margin_right = 320.0
+margin_bottom = 517.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 20 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal2" type="TextureButton" parent="LevelScene/Level3Dificil"]
+margin_left = 249.0
+margin_top = 86.0
+margin_right = 316.0
+margin_bottom = 155.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 22 )
+expand = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal5" type="TextureButton" parent="LevelScene/Level3Dificil"]
+margin_left = 67.0
+margin_top = 84.0
+margin_right = 134.0
+margin_bottom = 153.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 27 )
+expand = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal3" type="TextureButton" parent="LevelScene/Level3Dificil"]
+margin_left = 337.0
+margin_top = 88.0
+margin_right = 404.0
+margin_bottom = 157.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal33" type="TextureButton" parent="LevelScene/Level3Dificil"]
+visible = false
+margin_left = 55.0
+margin_top = 338.0
+margin_right = 150.0
+margin_bottom = 423.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal4" type="TextureButton" parent="LevelScene/Level3Dificil"]
+margin_left = 421.0
+margin_top = 88.0
+margin_right = 488.0
+margin_bottom = 157.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 30 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal6" type="TextureButton" parent="LevelScene/Level3Dificil"]
+margin_left = 511.0
+margin_top = 87.0
+margin_right = 580.0
+margin_bottom = 158.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal62" type="TextureButton" parent="LevelScene/Level3Dificil"]
+visible = false
+margin_left = 599.0
+margin_top = 247.0
+margin_right = 690.0
+margin_bottom = 334.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal9" type="TextureButton" parent="LevelScene/Level3Dificil"]
+margin_left = 797.0
+margin_top = 81.0
+margin_right = 866.0
+margin_bottom = 152.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 23 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal92" type="TextureButton" parent="LevelScene/Level3Dificil"]
+visible = false
+margin_left = 329.0
+margin_top = 339.0
+margin_right = 412.0
+margin_bottom = 426.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 23 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal8" type="TextureButton" parent="LevelScene/Level3Dificil"]
+margin_left = 707.0
+margin_top = 85.0
+margin_right = 776.0
+margin_bottom = 156.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 33 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal82" type="TextureButton" parent="LevelScene/Level3Dificil"]
+visible = false
+margin_left = 331.0
+margin_top = 249.0
+margin_right = 416.0
+margin_bottom = 336.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 33 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNormal7" type="TextureButton" parent="LevelScene/Level3Dificil"]
+margin_left = 613.0
+margin_top = 88.0
+margin_right = 680.0
+margin_bottom = 157.0
+hint_tooltip = "Start game
+"
+texture_normal = ExtResource( 32 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Final" type="NinePatchRect" parent="LevelScene"]
+visible = false
+margin_left = 12.0
+margin_top = 14.0
+margin_right = 972.0
+margin_bottom = 574.0
+texture = ExtResource( 41 )
+[connection signal="pressed" from="MainMenu/BackGroundImage/ButtonStart" to="." method="_on_ButtonStart_pressed"]
+[connection signal="pressed" from="MapScene/BackGroundImage2/ButtonNormal" to="." method="_on_ButtonNormal_pressed"]
+[connection signal="pressed" from="MapScene/BackGroundImage2/ButtonDificil" to="." method="_on_ButtonDificil_pressed"]
+[connection signal="pressed" from="MapScene/BackGroundImage2/ButtonBack" to="." method="_on_ButtonBack_pressed"]
+[connection signal="pressed" from="LevelScene/Level1/ButtonNormal2" to="LevelScene/Level1" method="_on_ButtonNormal2_pressed"]
+[connection signal="pressed" from="LevelScene/Level1/ButtonNormal3" to="LevelScene/Level1" method="_on_ButtonNormal3_pressed"]
+[connection signal="pressed" from="LevelScene/Level1/ButtonNormal4" to="LevelScene/Level1" method="_on_ButtonNormal4_pressed"]
+[connection signal="pressed" from="LevelScene/Level1/ButtonNormal44" to="LevelScene/Level1" method="_on_ButtonNormal4_pressed"]
+[connection signal="pressed" from="LevelScene/Level1/next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="LevelScene/Level1Dificil/next2" to="." method="_on_next2_pressed"]
+[connection signal="pressed" from="LevelScene/Level1Dificil/DButtonNormal" to="LevelScene/Level1Dificil" method="_on_DButtonNormal_pressed"]
+[connection signal="pressed" from="LevelScene/Level1Dificil/DButtonNormal2" to="LevelScene/Level1Dificil" method="_on_DButtonNormal2_pressed"]
+[connection signal="pressed" from="LevelScene/Level1Dificil/DButtonNormal3" to="LevelScene/Level1Dificil" method="_on_DButtonNormal3_pressed"]
+[connection signal="pressed" from="LevelScene/Level1Dificil/DButtonNormal4" to="LevelScene/Level1Dificil" method="_on_DButtonNormal4_pressed"]
+[connection signal="pressed" from="LevelScene/Level1Dificil/DButtonNormal44" to="LevelScene/Level1Dificil" method="_on_ButtonNormal4_pressed"]
+[connection signal="pressed" from="LevelScene/Level1Dificil/DButtonNormal7" to="LevelScene/Level1Dificil" method="_on_DButtonNormal7_pressed"]
+[connection signal="pressed" from="LevelScene/Level2/next3" to="." method="_on_next3_pressed"]
+[connection signal="pressed" from="LevelScene/Level2/ButtonNormal" to="LevelScene/Level2" method="_on_2ButtonNormal_pressed"]
+[connection signal="pressed" from="LevelScene/Level2/ButtonNormal2" to="LevelScene/Level2" method="_on_ButtonNormal2_pressed"]
+[connection signal="pressed" from="LevelScene/Level2/ButtonNormal3" to="LevelScene/Level2" method="_on_ButtonNormal3_pressed"]
+[connection signal="pressed" from="LevelScene/Level2/ButtonNormal4" to="LevelScene/Level2" method="_on_ButtonNormal4_pressed"]
+[connection signal="pressed" from="LevelScene/Level2/ButtonNormal7" to="LevelScene/Level2" method="_on_ButtonNormal7_pressed"]
+[connection signal="pressed" from="LevelScene/Level2Dificil/next4" to="." method="_on_next4_pressed"]
+[connection signal="pressed" from="LevelScene/Level2Dificil/ButtonNormal" to="LevelScene/Level2Dificil" method="_on_ButtonNormal_pressed"]
+[connection signal="pressed" from="LevelScene/Level2Dificil/ButtonNormal3" to="LevelScene/Level2Dificil" method="_on_ButtonNormal3_pressed"]
+[connection signal="pressed" from="LevelScene/Level2Dificil/ButtonNormal4" to="LevelScene/Level2Dificil" method="_on_ButtonNormal4_pressed"]
+[connection signal="pressed" from="LevelScene/Level2Dificil/ButtonNormal6" to="LevelScene/Level2Dificil" method="_on_ButtonNormal6_pressed"]
+[connection signal="pressed" from="LevelScene/Level2Dificil/ButtonNormal8" to="LevelScene/Level2Dificil" method="_on_ButtonNormal8_pressed"]
+[connection signal="pressed" from="LevelScene/Level2Dificil/ButtonNormal7" to="LevelScene/Level2Dificil" method="_on_ButtonNormal7_pressed"]
+[connection signal="pressed" from="LevelScene/Level3/next5" to="." method="_on_next5_pressed"]
+[connection signal="pressed" from="LevelScene/Level3/ButtonNormal" to="LevelScene/Level3" method="_on_ButtonNormal_pressed"]
+[connection signal="pressed" from="LevelScene/Level3/ButtonNormal2" to="LevelScene/Level3" method="_on_ButtonNormal2_pressed"]
+[connection signal="pressed" from="LevelScene/Level3/ButtonNormal3" to="LevelScene/Level3" method="_on_ButtonNormal3_pressed"]
+[connection signal="pressed" from="LevelScene/Level3/ButtonNormal4" to="LevelScene/Level3" method="_on_ButtonNormal4_pressed"]
+[connection signal="pressed" from="LevelScene/Level3/ButtonNormal6" to="LevelScene/Level3" method="_on_ButtonNormal6_pressed"]
+[connection signal="pressed" from="LevelScene/Level3/ButtonNormal8" to="LevelScene/Level3" method="_on_ButtonNormal8_pressed"]
+[connection signal="pressed" from="LevelScene/Level3/ButtonNormal7" to="LevelScene/Level3" method="_on_ButtonNormal7_pressed"]
+[connection signal="pressed" from="LevelScene/Level3Dificil/next6" to="." method="_on_next6_pressed"]
+[connection signal="pressed" from="LevelScene/Level3Dificil/ButtonNormal" to="LevelScene/Level3Dificil" method="_on_ButtonNormal_pressed"]
+[connection signal="pressed" from="LevelScene/Level3Dificil/ButtonNormal2" to="LevelScene/Level3Dificil" method="_on_ButtonNormal2_pressed"]
+[connection signal="pressed" from="LevelScene/Level3Dificil/ButtonNormal5" to="LevelScene/Level3Dificil" method="_on_ButtonNormal2_pressed"]
+[connection signal="pressed" from="LevelScene/Level3Dificil/ButtonNormal3" to="LevelScene/Level3Dificil" method="_on_ButtonNormal3_pressed"]
+[connection signal="pressed" from="LevelScene/Level3Dificil/ButtonNormal4" to="LevelScene/Level3Dificil" method="_on_ButtonNormal4_pressed"]
+[connection signal="pressed" from="LevelScene/Level3Dificil/ButtonNormal6" to="LevelScene/Level3Dificil" method="_on_ButtonNormal6_pressed"]
+[connection signal="pressed" from="LevelScene/Level3Dificil/ButtonNormal62" to="LevelScene/Level3Dificil" method="_on_ButtonNormal6_pressed"]
+[connection signal="pressed" from="LevelScene/Level3Dificil/ButtonNormal9" to="LevelScene/Level3Dificil" method="_on_ButtonNormal9_pressed"]
+[connection signal="pressed" from="LevelScene/Level3Dificil/ButtonNormal92" to="LevelScene/Level3Dificil" method="_on_ButtonNormal6_pressed"]
+[connection signal="pressed" from="LevelScene/Level3Dificil/ButtonNormal8" to="LevelScene/Level3Dificil" method="_on_ButtonNormal8_pressed"]
+[connection signal="pressed" from="LevelScene/Level3Dificil/ButtonNormal7" to="LevelScene/Level3Dificil" method="_on_ButtonNormal7_pressed"]
