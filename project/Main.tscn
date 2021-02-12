@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://figures/btn-normalCORRIGIDO.png" type="Texture" id=1]
 [ext_resource path="res://figures/btn-voltar.png" type="Texture" id=2]
@@ -41,6 +41,13 @@
 [ext_resource path="res://Level3.gd" type="Script" id=39]
 [ext_resource path="res://letras/direita.png" type="Texture" id=40]
 [ext_resource path="res://fundos/cenafinal-01.png" type="Texture" id=41]
+[ext_resource path="res://letra.gd" type="Script" id=42]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 42.3582, 41.8987 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 19.2538, 20.7701 )
 
 [node name="Main" type="Node"]
 script = ExtResource( 13 )
@@ -53,20 +60,18 @@ __meta__ = {
 }
 
 [node name="BackGroundImage" type="NinePatchRect" parent="MainMenu"]
-margin_left = 14.0
-margin_top = 16.0
-margin_right = 974.0
-margin_bottom = 576.0
+margin_right = 1033.0
+margin_bottom = 598.0
 texture = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ButtonStart" type="TextureButton" parent="MainMenu/BackGroundImage"]
-margin_left = 328.0
-margin_top = 302.0
-margin_right = 668.0
-margin_bottom = 400.0
+margin_left = 356.96
+margin_top = 328.0
+margin_right = 709.96
+margin_bottom = 430.0
 hint_tooltip = "Start game
 "
 texture_normal = ExtResource( 8 )
@@ -77,10 +82,10 @@ __meta__ = {
 }
 
 [node name="ButtonOptions" type="TextureButton" parent="MainMenu/BackGroundImage"]
-margin_left = 837.0
-margin_top = 8.0
-margin_right = 939.0
-margin_bottom = 102.0
+margin_left = 905.036
+margin_top = 16.8194
+margin_right = 1007.04
+margin_bottom = 110.819
 hint_tooltip = "Start game
 "
 texture_normal = ExtResource( 6 )
@@ -90,10 +95,10 @@ __meta__ = {
 }
 
 [node name="ButtonSair" type="TextureButton" parent="MainMenu/BackGroundImage"]
-margin_left = 398.0
-margin_top = 456.0
-margin_right = 598.0
-margin_bottom = 540.0
+margin_left = 425.401
+margin_top = 479.0
+margin_right = 649.401
+margin_bottom = 573.0
 texture_normal = ExtResource( 7 )
 texture_hover = ExtResource( 9 )
 expand = true
@@ -178,133 +183,10 @@ __meta__ = {
 
 [node name="Level1" type="NinePatchRect" parent="LevelScene"]
 visible = false
-margin_left = 12.0
-margin_top = 14.0
-margin_right = 972.0
-margin_bottom = 574.0
+margin_right = 1022.0
+margin_bottom = 603.0
 texture = ExtResource( 18 )
 script = ExtResource( 36 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ButtonNormal" type="TextureButton" parent="LevelScene/Level1"]
-margin_left = 155.0
-margin_top = 90.0
-margin_right = 222.0
-margin_bottom = 159.0
-hint_tooltip = "Start game
-"
-texture_normal = ExtResource( 17 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ButtonNormal2" type="TextureButton" parent="LevelScene/Level1"]
-margin_left = 261.0
-margin_top = 92.0
-margin_right = 328.0
-margin_bottom = 161.0
-hint_tooltip = "Start game
-"
-texture_normal = ExtResource( 22 )
-expand = true
-script = ExtResource( 15 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ButtonNormal22" type="TextureButton" parent="LevelScene/Level1"]
-visible = false
-margin_left = 238.0
-margin_top = 430.0
-margin_right = 325.0
-margin_bottom = 517.0
-hint_tooltip = "Start game
-"
-texture_normal = ExtResource( 22 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ButtonNormal3" type="TextureButton" parent="LevelScene/Level1"]
-margin_left = 373.0
-margin_top = 90.0
-margin_right = 440.0
-margin_bottom = 159.0
-hint_tooltip = "Start game
-"
-texture_normal = ExtResource( 19 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ButtonNormal33" type="TextureButton" parent="LevelScene/Level1"]
-visible = false
-margin_left = 415.0
-margin_top = 256.0
-margin_right = 502.0
-margin_bottom = 331.0
-hint_tooltip = "Start game
-"
-texture_normal = ExtResource( 19 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ButtonNormal4" type="TextureButton" parent="LevelScene/Level1"]
-margin_left = 477.0
-margin_top = 92.0
-margin_right = 544.0
-margin_bottom = 161.0
-hint_tooltip = "Start game
-"
-texture_normal = ExtResource( 16 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ButtonNormal44" type="TextureButton" parent="LevelScene/Level1"]
-visible = false
-margin_left = 513.0
-margin_top = 342.0
-margin_right = 592.0
-margin_bottom = 421.0
-hint_tooltip = "Start game
-"
-texture_normal = ExtResource( 16 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ButtonNormal5" type="TextureButton" parent="LevelScene/Level1"]
-margin_left = 585.0
-margin_top = 94.0
-margin_right = 652.0
-margin_bottom = 163.0
-hint_tooltip = "Start game
-"
-texture_normal = ExtResource( 20 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ButtonNormal6" type="TextureButton" parent="LevelScene/Level1"]
-margin_left = 707.0
-margin_top = 92.0
-margin_right = 774.0
-margin_bottom = 161.0
-hint_tooltip = "Start game
-"
-texture_normal = ExtResource( 21 )
-expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -319,6 +201,118 @@ expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="letra" type="Area2D" parent="LevelScene/Level1"]
+position = Vector2( 186.954, 123.587 )
+script = ExtResource( 42 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="LevelScene/Level1/letra"]
+scale = Vector2( 0.517808, 0.517808 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelScene/Level1/letra"]
+shape = SubResource( 1 )
+
+[node name="letra2" type="Area2D" parent="LevelScene/Level1"]
+position = Vector2( 306.954, 123.587 )
+script = ExtResource( 42 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="LevelScene/Level1/letra2"]
+scale = Vector2( 0.517808, 0.517808 )
+texture = ExtResource( 22 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelScene/Level1/letra2"]
+shape = SubResource( 1 )
+
+[node name="letra3" type="Area2D" parent="LevelScene/Level1"]
+position = Vector2( 426.954, 123.587 )
+script = ExtResource( 42 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="LevelScene/Level1/letra3"]
+scale = Vector2( 0.517808, 0.517808 )
+texture = ExtResource( 19 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelScene/Level1/letra3"]
+shape = SubResource( 1 )
+
+[node name="letra4" type="Area2D" parent="LevelScene/Level1"]
+position = Vector2( 546.954, 123.587 )
+script = ExtResource( 42 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="LevelScene/Level1/letra4"]
+scale = Vector2( 0.517808, 0.517808 )
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelScene/Level1/letra4"]
+shape = SubResource( 1 )
+
+[node name="letra5" type="Area2D" parent="LevelScene/Level1"]
+position = Vector2( 666.954, 123.587 )
+script = ExtResource( 42 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="LevelScene/Level1/letra5"]
+scale = Vector2( 0.517808, 0.517808 )
+texture = ExtResource( 20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelScene/Level1/letra5"]
+shape = SubResource( 1 )
+
+[node name="letra6" type="Area2D" parent="LevelScene/Level1"]
+position = Vector2( 786.954, 123.587 )
+script = ExtResource( 42 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="LevelScene/Level1/letra6"]
+scale = Vector2( 0.517808, 0.517808 )
+texture = ExtResource( 21 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelScene/Level1/letra6"]
+shape = SubResource( 1 )
+
+[node name="spotLetra" type="Area2D" parent="LevelScene/Level1"]
+position = Vector2( 488.83, 316.494 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelScene/Level1/spotLetra"]
+shape = SubResource( 2 )
+
+[node name="spotLetra2" type="Area2D" parent="LevelScene/Level1"]
+position = Vector2( 585.93, 412.224 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelScene/Level1/spotLetra2"]
+position = Vector2( -0.0553379, -0.00263119 )
+shape = SubResource( 2 )
+
+[node name="spotLetra3" type="Area2D" parent="LevelScene/Level1"]
+position = Vector2( 298.265, 511.655 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelScene/Level1/spotLetra3"]
+shape = SubResource( 2 )
 
 [node name="Level1Dificil" type="NinePatchRect" parent="LevelScene"]
 visible = false
@@ -1214,11 +1208,31 @@ texture = ExtResource( 41 )
 [connection signal="pressed" from="MapScene/BackGroundImage2/ButtonNormal" to="." method="_on_ButtonNormal_pressed"]
 [connection signal="pressed" from="MapScene/BackGroundImage2/ButtonDificil" to="." method="_on_ButtonDificil_pressed"]
 [connection signal="pressed" from="MapScene/BackGroundImage2/ButtonBack" to="." method="_on_ButtonBack_pressed"]
-[connection signal="pressed" from="LevelScene/Level1/ButtonNormal2" to="LevelScene/Level1" method="_on_ButtonNormal2_pressed"]
-[connection signal="pressed" from="LevelScene/Level1/ButtonNormal3" to="LevelScene/Level1" method="_on_ButtonNormal3_pressed"]
-[connection signal="pressed" from="LevelScene/Level1/ButtonNormal4" to="LevelScene/Level1" method="_on_ButtonNormal4_pressed"]
-[connection signal="pressed" from="LevelScene/Level1/ButtonNormal44" to="LevelScene/Level1" method="_on_ButtonNormal4_pressed"]
 [connection signal="pressed" from="LevelScene/Level1/next" to="." method="_on_next_pressed"]
+[connection signal="input_event" from="LevelScene/Level1/letra" to="LevelScene/Level1/letra" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="LevelScene/Level1/letra2" to="LevelScene/Level1/letra2" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="LevelScene/Level1/letra3" to="LevelScene/Level1/letra3" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="LevelScene/Level1/letra4" to="LevelScene/Level1/letra4" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="LevelScene/Level1/letra5" to="LevelScene/Level1/letra5" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="LevelScene/Level1/letra6" to="LevelScene/Level1/letra6" method="_on_Area2D_input_event"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra" to="LevelScene/Level1/letra" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra" to="LevelScene/Level1/letra4" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra" to="LevelScene/Level1/letra5" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra" to="LevelScene/Level1/letra2" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra" to="LevelScene/Level1/letra6" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra" to="LevelScene/Level1/letra3" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra2" to="LevelScene/Level1/letra" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra2" to="LevelScene/Level1/letra4" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra2" to="LevelScene/Level1/letra5" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra2" to="LevelScene/Level1/letra2" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra2" to="LevelScene/Level1/letra6" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra2" to="LevelScene/Level1/letra3" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra3" to="LevelScene/Level1/letra" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra3" to="LevelScene/Level1/letra4" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra3" to="LevelScene/Level1/letra5" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra3" to="LevelScene/Level1/letra2" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra3" to="LevelScene/Level1/letra6" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra3" to="LevelScene/Level1/letra3" method="_on_spotLetra3_area_entered"]
 [connection signal="pressed" from="LevelScene/Level1Dificil/next2" to="." method="_on_next2_pressed"]
 [connection signal="pressed" from="LevelScene/Level1Dificil/DButtonNormal" to="LevelScene/Level1Dificil" method="_on_DButtonNormal_pressed"]
 [connection signal="pressed" from="LevelScene/Level1Dificil/DButtonNormal2" to="LevelScene/Level1Dificil" method="_on_DButtonNormal2_pressed"]
