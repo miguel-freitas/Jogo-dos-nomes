@@ -1,6 +1,6 @@
 extends Control
 
-var speed = 100
+var speed = 80
 var direction = Vector2(1, 0)
 
 onready var parallax = $BackGroundImage/ParallaxBackground

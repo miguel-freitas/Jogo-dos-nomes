@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/listanomes-02.png-dbeba3c2a47af737ca622b134c4c4f3a.stex"
+path="res://.import/nms-lin01.png-1e9416ff10aedb8127aea5c08b5aa5f1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fundos/nomes/listanomes-02.png"
-dest_files=[ "res://.import/listanomes-02.png-dbeba3c2a47af737ca622b134c4c4f3a.stex" ]
+source_file="res://fundos/nomes/nms-lin01.png"
+dest_files=[ "res://.import/nms-lin01.png-1e9416ff10aedb8127aea5c08b5aa5f1.stex" ]
 
 [params]
 
