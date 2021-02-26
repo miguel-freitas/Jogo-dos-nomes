@@ -1,12 +1,13 @@
 extends Node
 
-func _ready():
-	pass # Replace with function body.
+var speed = 82
+var direction = Vector2(1, 0)
 
+onready var parallax = $ParallaxBackground
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	parallax.scroll_offset += direction * speed * delta
+pass
 
 
 func _on_ButtonStart_pressed():
@@ -53,9 +54,9 @@ func _on_next2_pressed():
 	var resposta2 = get_node("LevelScene/Level1Dificil/letra3").global_position
 	var espaco3 = get_node("LevelScene/Level1Dificil/spotLetra3").global_position
 	var resposta3 = get_node("LevelScene/Level1Dificil/letra4").global_position
-	var espaco4 = get_node("LevelScene/Level1Dificil/spotLetra3").global_position
+	var espaco4 = get_node("LevelScene/Level1Dificil/spotLetra4").global_position
 	var resposta4 = get_node("LevelScene/Level1Dificil/letra2").global_position
-	var espaco5 = get_node("LevelScene/Level1Dificil/spotLetra3").global_position
+	var espaco5 = get_node("LevelScene/Level1Dificil/spotLetra5").global_position
 	var resposta5 = get_node("LevelScene/Level1Dificil/letra7").global_position
 	if espaco1 == resposta1 && espaco2 == resposta2 && espaco3 == resposta3 && espaco4 == resposta4 && espaco5 == resposta5:
 		$LevelScene/Level1Dificil.hide()
@@ -81,9 +82,9 @@ func _on_next4_pressed():
 	var resposta2 = get_node("LevelScene/Level2Dificil/letra6").global_position
 	var espaco3 = get_node("LevelScene/Level2Dificil/spotLetra3").global_position
 	var resposta3 = get_node("LevelScene/Level2Dificil/letra3").global_position
-	var espaco4 = get_node("LevelScene/Level2Dificil/spotLetra3").global_position
-	var resposta4 = get_node("LevelScene/Level2Dificil/letra1").global_position
-	var espaco5 = get_node("LevelScene/Level2Dificil/spotLetra3").global_position
+	var espaco4 = get_node("LevelScene/Level2Dificil/spotLetra4").global_position
+	var resposta4 = get_node("LevelScene/Level2Dificil/letra").global_position
+	var espaco5 = get_node("LevelScene/Level2Dificil/spotLetra5").global_position
 	var resposta5 = get_node("LevelScene/Level2Dificil/letra5").global_position
 	if espaco1 == resposta1 && espaco2 == resposta2 && espaco3 == resposta3 && espaco4 == resposta4 && espaco5 == resposta5:
 		$LevelScene/Level2Dificil.hide()
@@ -106,14 +107,14 @@ func _on_next5_pressed():
 
 func _on_next6_pressed():
 	var espaco1 = get_node("LevelScene/Level3Dificil/spotLetra").global_position
-	var resposta1 = get_node("LevelScene/Level3Dificil/letra").global_position
+	var resposta1 = get_node("LevelScene/Level3Dificil/letra8").global_position
 	var espaco2 = get_node("LevelScene/Level3Dificil/spotLetra2").global_position
 	var resposta2 = get_node("LevelScene/Level3Dificil/letra6").global_position
 	var espaco3 = get_node("LevelScene/Level3Dificil/spotLetra3").global_position
 	var resposta3 = get_node("LevelScene/Level3Dificil/letra4").global_position
-	var espaco4 = get_node("LevelScene/Level3Dificil/spotLetra3").global_position
+	var espaco4 = get_node("LevelScene/Level3Dificil/spotLetra4").global_position
 	var resposta4 = get_node("LevelScene/Level3Dificil/letra9").global_position
-	var espaco5 = get_node("LevelScene/Level3Dificil/spotLetra3").global_position
+	var espaco5 = get_node("LevelScene/Level3Dificil/spotLetra5").global_position
 	var resposta5 = get_node("LevelScene/Level3Dificil/letra2").global_position
 	if espaco1 == resposta1 && espaco2 == resposta2 && espaco3 == resposta3 && espaco4 == resposta4 && espaco5 == resposta5:
 		$LevelScene/Level3Dificil.hide()

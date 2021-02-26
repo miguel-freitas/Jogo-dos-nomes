@@ -1,46 +1,43 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://figures/btn-normalCORRIGIDO.png" type="Texture" id=1]
 [ext_resource path="res://figures/btn-voltar.png" type="Texture" id=2]
 [ext_resource path="res://figures/btn-normal-hoverCORRIGIDO.png" type="Texture" id=3]
 [ext_resource path="res://fundos/nomes/nms-lin01.png" type="Texture" id=4]
 [ext_resource path="res://figures/btn-dificil-hoverCORRIGIDO.png" type="Texture" id=5]
-[ext_resource path="res://figures/Ícone-Engrenagem-PNG.png" type="Texture" id=6]
-[ext_resource path="res://figures/botao-sairCORRIGIDO (1).png" type="Texture" id=7]
+[ext_resource path="res://fundos/menuDificuldadeLimpo-01.png" type="Texture" id=6]
+[ext_resource path="res://fundos/cenafinal-01 (1).png" type="Texture" id=7]
 [ext_resource path="res://figures/botao-jogarCORRIGIDO (1).png" type="Texture" id=8]
-[ext_resource path="res://figures/botao-sair-hoverCORRIGIDO.png" type="Texture" id=9]
+[ext_resource path="res://fundos/niveis/M3-NORMAL.png" type="Texture" id=9]
 [ext_resource path="res://figures/botao-jogar-corrigido.png" type="Texture" id=10]
-[ext_resource path="res://fundos/dificuldade-limpo-01.png" type="Texture" id=11]
+[ext_resource path="res://fundos/niveis/M1-DIFICIL.png" type="Texture" id=11]
 [ext_resource path="res://figures/btn-dificilCORRIGIDO.png" type="Texture" id=12]
 [ext_resource path="res://Main.gd" type="Script" id=13]
 [ext_resource path="res://Level3Dificil.gd" type="Script" id=14]
 [ext_resource path="res://fundos/menuLimpo-01.png" type="Texture" id=15]
 [ext_resource path="res://letras/letraL.png" type="Texture" id=16]
 [ext_resource path="res://letras/letraA.png" type="Texture" id=17]
-[ext_resource path="res://fundos/M1-NORMAL-IMP-01.png" type="Texture" id=18]
+[ext_resource path="res://fundos/niveis/M1-NORMAL.png" type="Texture" id=18]
 [ext_resource path="res://letras/letraE.png" type="Texture" id=19]
 [ext_resource path="res://letras/letraO.png" type="Texture" id=20]
 [ext_resource path="res://letras/letraP.png" type="Texture" id=21]
 [ext_resource path="res://letras/letraD.png" type="Texture" id=22]
 [ext_resource path="res://letras/letraR.png" type="Texture" id=23]
-[ext_resource path="res://fundos/M1-DIFICIL-IMP-01.png" type="Texture" id=24]
-[ext_resource path="res://fundos/M2-N-IMP-01.png" type="Texture" id=25]
+[ext_resource path="res://fundos/niveis/M2-NORMAL.png" type="Texture" id=24]
+[ext_resource path="res://fundos/niveis/M3-DIFICIL.png" type="Texture" id=25]
 [ext_resource path="res://letras/letraZ.png" type="Texture" id=26]
 [ext_resource path="res://letras/letraC.png" type="Texture" id=27]
-[ext_resource path="res://fundos/M2-H-IMP-01.png" type="Texture" id=28]
+[ext_resource path="res://fundos/niveis/M2-DIFICIL.png" type="Texture" id=28]
 [ext_resource path="res://letras/letraT.png" type="Texture" id=29]
 [ext_resource path="res://letras/letraM.png" type="Texture" id=30]
-[ext_resource path="res://fundos/M3-NORMAL-IMPLEMENTACAO-01.png" type="Texture" id=31]
 [ext_resource path="res://letras/letraJ.png" type="Texture" id=32]
 [ext_resource path="res://letras/letraV.png" type="Texture" id=33]
-[ext_resource path="res://fundos/modelo2-DIFICIL-IMPLEMENT-01.png" type="Texture" id=34]
 [ext_resource path="res://Level1Dificil.gd" type="Script" id=35]
 [ext_resource path="res://Level1.gd" type="Script" id=36]
 [ext_resource path="res://Level2.gd" type="Script" id=37]
 [ext_resource path="res://Level2Dificil.gd" type="Script" id=38]
 [ext_resource path="res://Level3.gd" type="Script" id=39]
 [ext_resource path="res://letras/direita.png" type="Texture" id=40]
-[ext_resource path="res://fundos/cenafinal-01.png" type="Texture" id=41]
 [ext_resource path="res://letra.gd" type="Script" id=42]
 [ext_resource path="res://MainMenu.gd" type="Script" id=43]
 [ext_resource path="res://fundos/nomes/nms-lin02.png" type="Texture" id=44]
@@ -97,6 +94,107 @@ anim_speed_random = 0.25
 [node name="Main" type="Node"]
 script = ExtResource( 13 )
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1366, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( -0.166765, 0.143871 )
+scale = Vector2( 0.227815, 0.227815 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.75, 0.75 )
+motion_mirroring = Vector2( 1620, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( -3.34774, 64.0975 )
+scale = Vector2( 0.278973, 0.20648 )
+texture = ExtResource( 44 )
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.85, 0.85 )
+motion_mirroring = Vector2( 1610, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2( -1.34774, 124.098 )
+scale = Vector2( 0.278973, 0.20648 )
+texture = ExtResource( 47 )
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.95, 0.95 )
+motion_mirroring = Vector2( 1626, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2( -2.4072, 184.249 )
+scale = Vector2( 0.278973, 0.20648 )
+texture = ExtResource( 50 )
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.7, 0.7 )
+motion_mirroring = Vector2( 1790, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2( 2.44389, 309.588 )
+scale = Vector2( 0.278973, 0.20648 )
+texture = ExtResource( 51 )
+centered = false
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.9, 0.9 )
+motion_mirroring = Vector2( 1825, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2( -0.793968, 245.199 )
+scale = Vector2( 0.278973, 0.20648 )
+texture = ExtResource( 46 )
+centered = false
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 1.05, 1.05 )
+motion_mirroring = Vector2( 1586, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer7"]
+position = Vector2( 1.38444, 371.799 )
+scale = Vector2( 0.278973, 0.20648 )
+texture = ExtResource( 49 )
+centered = false
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.8, 0.8 )
+motion_mirroring = Vector2( 1700, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer8"]
+position = Vector2( 0.324959, 428.654 )
+scale = Vector2( 0.278973, 0.20648 )
+texture = ExtResource( 48 )
+centered = false
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.78, 0.78 )
+motion_mirroring = Vector2( 1840, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer9"]
+position = Vector2( 0.730324, 490.924 )
+scale = Vector2( 0.278973, 0.20648 )
+texture = ExtResource( 52 )
+centered = false
+
+[node name="ParallaxLayer10" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.92, 0.92 )
+motion_mirroring = Vector2( 1845, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer10"]
+position = Vector2( -7.09129, 555.373 )
+scale = Vector2( 0.278973, 0.20648 )
+texture = ExtResource( 53 )
+centered = false
+
 [node name="MainMenu" type="Control" parent="."]
 margin_right = 1000.0
 margin_bottom = 600.0
@@ -112,107 +210,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="MainMenu/BackGroundImage"]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="MainMenu/BackGroundImage/ParallaxBackground"]
-motion_mirroring = Vector2( 1366, 0 )
-
-[node name="Sprite" type="Sprite" parent="MainMenu/BackGroundImage/ParallaxBackground/ParallaxLayer"]
-position = Vector2( -0.166765, 0.143871 )
-scale = Vector2( 0.227815, 0.227815 )
-texture = ExtResource( 4 )
-centered = false
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="MainMenu/BackGroundImage/ParallaxBackground"]
-motion_scale = Vector2( 0.75, 0.75 )
-motion_mirroring = Vector2( 1620, 0 )
-
-[node name="Sprite" type="Sprite" parent="MainMenu/BackGroundImage/ParallaxBackground/ParallaxLayer2"]
-position = Vector2( -3.34774, 64.0975 )
-scale = Vector2( 0.278973, 0.20648 )
-texture = ExtResource( 44 )
-centered = false
-
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="MainMenu/BackGroundImage/ParallaxBackground"]
-motion_scale = Vector2( 0.85, 0.85 )
-motion_mirroring = Vector2( 1610, 0 )
-
-[node name="Sprite" type="Sprite" parent="MainMenu/BackGroundImage/ParallaxBackground/ParallaxLayer3"]
-position = Vector2( -1.34774, 124.098 )
-scale = Vector2( 0.278973, 0.20648 )
-texture = ExtResource( 47 )
-centered = false
-
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="MainMenu/BackGroundImage/ParallaxBackground"]
-motion_scale = Vector2( 0.95, 0.95 )
-motion_mirroring = Vector2( 1626, 0 )
-
-[node name="Sprite" type="Sprite" parent="MainMenu/BackGroundImage/ParallaxBackground/ParallaxLayer4"]
-position = Vector2( -2.4072, 184.249 )
-scale = Vector2( 0.278973, 0.20648 )
-texture = ExtResource( 50 )
-centered = false
-
-[node name="ParallaxLayer5" type="ParallaxLayer" parent="MainMenu/BackGroundImage/ParallaxBackground"]
-motion_scale = Vector2( 0.7, 0.7 )
-motion_mirroring = Vector2( 1790, 0 )
-
-[node name="Sprite" type="Sprite" parent="MainMenu/BackGroundImage/ParallaxBackground/ParallaxLayer5"]
-position = Vector2( 2.44389, 309.588 )
-scale = Vector2( 0.278973, 0.20648 )
-texture = ExtResource( 51 )
-centered = false
-
-[node name="ParallaxLayer6" type="ParallaxLayer" parent="MainMenu/BackGroundImage/ParallaxBackground"]
-motion_scale = Vector2( 0.9, 0.9 )
-motion_mirroring = Vector2( 1825, 0 )
-
-[node name="Sprite" type="Sprite" parent="MainMenu/BackGroundImage/ParallaxBackground/ParallaxLayer6"]
-position = Vector2( -0.793968, 245.199 )
-scale = Vector2( 0.278973, 0.20648 )
-texture = ExtResource( 46 )
-centered = false
-
-[node name="ParallaxLayer7" type="ParallaxLayer" parent="MainMenu/BackGroundImage/ParallaxBackground"]
-motion_scale = Vector2( 1.05, 1.05 )
-motion_mirroring = Vector2( 1586, 0 )
-
-[node name="Sprite" type="Sprite" parent="MainMenu/BackGroundImage/ParallaxBackground/ParallaxLayer7"]
-position = Vector2( 1.38444, 371.799 )
-scale = Vector2( 0.278973, 0.20648 )
-texture = ExtResource( 49 )
-centered = false
-
-[node name="ParallaxLayer8" type="ParallaxLayer" parent="MainMenu/BackGroundImage/ParallaxBackground"]
-motion_scale = Vector2( 0.8, 0.8 )
-motion_mirroring = Vector2( 1700, 0 )
-
-[node name="Sprite" type="Sprite" parent="MainMenu/BackGroundImage/ParallaxBackground/ParallaxLayer8"]
-position = Vector2( 0.324959, 428.654 )
-scale = Vector2( 0.278973, 0.20648 )
-texture = ExtResource( 48 )
-centered = false
-
-[node name="ParallaxLayer9" type="ParallaxLayer" parent="MainMenu/BackGroundImage/ParallaxBackground"]
-motion_scale = Vector2( 0.78, 0.78 )
-motion_mirroring = Vector2( 1840, 0 )
-
-[node name="Sprite" type="Sprite" parent="MainMenu/BackGroundImage/ParallaxBackground/ParallaxLayer9"]
-position = Vector2( 0.730324, 490.924 )
-scale = Vector2( 0.278973, 0.20648 )
-texture = ExtResource( 52 )
-centered = false
-
-[node name="ParallaxLayer10" type="ParallaxLayer" parent="MainMenu/BackGroundImage/ParallaxBackground"]
-motion_scale = Vector2( 0.92, 0.92 )
-motion_mirroring = Vector2( 1845, 0 )
-
-[node name="Sprite" type="Sprite" parent="MainMenu/BackGroundImage/ParallaxBackground/ParallaxLayer10"]
-position = Vector2( -7.09129, 555.373 )
-scale = Vector2( 0.278973, 0.20648 )
-texture = ExtResource( 53 )
-centered = false
-
 [node name="MenuBg" type="NinePatchRect" parent="MainMenu/BackGroundImage"]
 margin_left = 92.5594
 margin_right = 944.559
@@ -223,26 +220,14 @@ __meta__ = {
 }
 
 [node name="ButtonStart" type="TextureButton" parent="MainMenu/BackGroundImage"]
-margin_left = 356.96
-margin_top = 328.0
-margin_right = 709.96
-margin_bottom = 430.0
+margin_left = 338.364
+margin_top = 393.227
+margin_right = 726.364
+margin_bottom = 515.227
 hint_tooltip = "Start game
 "
 texture_normal = ExtResource( 8 )
 texture_hover = ExtResource( 10 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ButtonSair" type="TextureButton" parent="MainMenu/BackGroundImage"]
-margin_left = 425.401
-margin_top = 479.0
-margin_right = 649.401
-margin_bottom = 573.0
-texture_normal = ExtResource( 7 )
-texture_hover = ExtResource( 9 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -257,20 +242,18 @@ __meta__ = {
 }
 
 [node name="BackGroundImage2" type="NinePatchRect" parent="MapScene"]
-margin_left = 14.0
-margin_top = 16.0
-margin_right = 974.0
-margin_bottom = 576.0
-texture = ExtResource( 11 )
+margin_right = 1033.0
+margin_bottom = 598.0
+texture = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ButtonNormal" type="TextureButton" parent="MapScene/BackGroundImage2"]
-margin_left = 209.0
-margin_top = 184.0
-margin_right = 784.0
-margin_bottom = 295.0
+margin_left = 236.318
+margin_top = 219.364
+margin_right = 835.318
+margin_bottom = 331.364
 hint_tooltip = "Start game
 "
 texture_normal = ExtResource( 1 )
@@ -280,24 +263,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ButtonOptions" type="TextureButton" parent="MapScene/BackGroundImage2"]
-margin_left = 837.0
-margin_top = 8.0
-margin_right = 939.0
-margin_bottom = 102.0
-hint_tooltip = "Start game
-"
-texture_normal = ExtResource( 6 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="ButtonDificil" type="TextureButton" parent="MapScene/BackGroundImage2"]
-margin_left = 264.0
-margin_top = 325.0
-margin_right = 729.0
-margin_bottom = 423.0
+margin_left = 292.591
+margin_top = 364.091
+margin_right = 772.591
+margin_bottom = 472.091
 texture_normal = ExtResource( 12 )
 texture_hover = ExtResource( 5 )
 expand = true
@@ -306,10 +276,10 @@ __meta__ = {
 }
 
 [node name="ButtonBack" type="TextureButton" parent="MapScene/BackGroundImage2"]
-margin_left = 432.595
-margin_top = 455.238
-margin_right = 541.595
-margin_bottom = 540.238
+margin_left = 474.64
+margin_top = 490.556
+margin_right = 583.64
+margin_bottom = 575.556
 texture_normal = ExtResource( 2 )
 expand = true
 __meta__ = {
@@ -429,7 +399,7 @@ texture = ExtResource( 21 )
 shape = SubResource( 1 )
 
 [node name="spotLetra" type="Area2D" parent="LevelScene/Level1"]
-position = Vector2( 488.83, 316.494 )
+position = Vector2( 488.83, 316 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -438,7 +408,7 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="spotLetra2" type="Area2D" parent="LevelScene/Level1"]
-position = Vector2( 585.93, 412.224 )
+position = Vector2( 585.93, 412 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -448,7 +418,7 @@ position = Vector2( -0.0553379, -0.00263119 )
 shape = SubResource( 2 )
 
 [node name="spotLetra3" type="Area2D" parent="LevelScene/Level1"]
-position = Vector2( 298.265, 511.655 )
+position = Vector2( 299.1, 511.655 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -460,7 +430,7 @@ shape = SubResource( 2 )
 visible = false
 margin_right = 1022.0
 margin_bottom = 603.0
-texture = ExtResource( 24 )
+texture = ExtResource( 11 )
 script = ExtResource( 35 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -576,7 +546,7 @@ texture = ExtResource( 23 )
 shape = SubResource( 1 )
 
 [node name="spotLetra" type="Area2D" parent="LevelScene/Level1Dificil"]
-position = Vector2( 109.785, 318.208 )
+position = Vector2( 109.785, 317.42 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -585,7 +555,7 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="spotLetra2" type="Area2D" parent="LevelScene/Level1Dificil"]
-position = Vector2( 485.81, 318.208 )
+position = Vector2( 486.71, 317.2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -594,7 +564,7 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="spotLetra3" type="Area2D" parent="LevelScene/Level1Dificil"]
-position = Vector2( 584.586, 412.495 )
+position = Vector2( 584.586, 411.9 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -603,7 +573,7 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="spotLetra4" type="Area2D" parent="LevelScene/Level1Dificil"]
-position = Vector2( 299.481, 513.517 )
+position = Vector2( 299.481, 512.39 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -612,7 +582,7 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="spotLetra5" type="Area2D" parent="LevelScene/Level1Dificil"]
-position = Vector2( 391.523, 512.394 )
+position = Vector2( 391.523, 511.82 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -624,7 +594,7 @@ shape = SubResource( 2 )
 visible = false
 margin_right = 1022.0
 margin_bottom = 603.0
-texture = ExtResource( 25 )
+texture = ExtResource( 24 )
 script = ExtResource( 37 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -715,7 +685,7 @@ texture = ExtResource( 26 )
 shape = SubResource( 1 )
 
 [node name="spotLetra" type="Area2D" parent="LevelScene/Level2"]
-position = Vector2( 678.83, 317.494 )
+position = Vector2( 678.83, 317 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -724,7 +694,7 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="spotLetra2" type="Area2D" parent="LevelScene/Level2"]
-position = Vector2( 107.93, 412.224 )
+position = Vector2( 107.93, 411.224 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -734,7 +704,7 @@ position = Vector2( -0.0553379, -0.00263119 )
 shape = SubResource( 2 )
 
 [node name="spotLetra3" type="Area2D" parent="LevelScene/Level2"]
-position = Vector2( 299.265, 512.655 )
+position = Vector2( 299.265, 511.155 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -873,7 +843,7 @@ texture = ExtResource( 29 )
 shape = SubResource( 1 )
 
 [node name="spotLetra" type="Area2D" parent="LevelScene/Level2Dificil"]
-position = Vector2( 391.87, 319.923 )
+position = Vector2( 391.87, 318.223 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -882,7 +852,7 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="spotLetra2" type="Area2D" parent="LevelScene/Level2Dificil"]
-position = Vector2( 679.22, 319.923 )
+position = Vector2( 679.22, 318.2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -891,7 +861,7 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="spotLetra3" type="Area2D" parent="LevelScene/Level2Dificil"]
-position = Vector2( 107.887, 413.087 )
+position = Vector2( 107.287, 412.55 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -900,7 +870,7 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="spotLetra4" type="Area2D" parent="LevelScene/Level2Dificil"]
-position = Vector2( 298.706, 511.864 )
+position = Vector2( 298.706, 511.44 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -909,7 +879,7 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="spotLetra5" type="Area2D" parent="LevelScene/Level2Dificil"]
-position = Vector2( 680.343, 510.741 )
+position = Vector2( 680.343, 510.241 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -921,7 +891,7 @@ shape = SubResource( 2 )
 visible = false
 margin_right = 1022.0
 margin_bottom = 603.0
-texture = ExtResource( 31 )
+texture = ExtResource( 9 )
 script = ExtResource( 39 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1037,7 +1007,7 @@ texture = ExtResource( 33 )
 shape = SubResource( 1 )
 
 [node name="spotLetra" type="Area2D" parent="LevelScene/Level3"]
-position = Vector2( 392.524, 319.188 )
+position = Vector2( 392.524, 318.2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1046,7 +1016,7 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="spotLetra2" type="Area2D" parent="LevelScene/Level3"]
-position = Vector2( 108.541, 412.352 )
+position = Vector2( 108.541, 411 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1055,7 +1025,7 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="spotLetra3" type="Area2D" parent="LevelScene/Level3"]
-position = Vector2( 298.237, 511.129 )
+position = Vector2( 298.237, 510.1 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1067,7 +1037,7 @@ shape = SubResource( 2 )
 visible = false
 margin_right = 1022.0
 margin_bottom = 603.0
-texture = ExtResource( 34 )
+texture = ExtResource( 25 )
 script = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1211,7 +1181,7 @@ texture = ExtResource( 23 )
 shape = SubResource( 1 )
 
 [node name="spotLetra" type="Area2D" parent="LevelScene/Level3Dificil"]
-position = Vector2( 392.217, 320.515 )
+position = Vector2( 392.217, 318.35 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1220,7 +1190,7 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="spotLetra2" type="Area2D" parent="LevelScene/Level3Dificil"]
-position = Vector2( 680.69, 319.392 )
+position = Vector2( 680.69, 319 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1229,7 +1199,7 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="spotLetra3" type="Area2D" parent="LevelScene/Level3Dificil"]
-position = Vector2( 105.989, 412.557 )
+position = Vector2( 105.989, 411.65 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1238,7 +1208,7 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="spotLetra4" type="Area2D" parent="LevelScene/Level3Dificil"]
-position = Vector2( 393.339, 413.679 )
+position = Vector2( 393.339, 413.379 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1247,7 +1217,7 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="spotLetra5" type="Area2D" parent="LevelScene/Level3Dificil"]
-position = Vector2( 299.053, 513.578 )
+position = Vector2( 299.053, 512.58 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1259,7 +1229,7 @@ shape = SubResource( 2 )
 visible = false
 margin_right = 1024.0
 margin_bottom = 600.0
-texture = ExtResource( 41 )
+texture = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1301,24 +1271,24 @@ texture = ExtResource( 45 )
 [connection signal="input_event" from="LevelScene/Level1/letra4" to="LevelScene/Level1/letra4" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="LevelScene/Level1/letra5" to="LevelScene/Level1/letra5" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="LevelScene/Level1/letra6" to="LevelScene/Level1/letra6" method="_on_Area2D_input_event"]
-[connection signal="area_entered" from="LevelScene/Level1/spotLetra" to="LevelScene/Level1/letra3" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1/spotLetra" to="LevelScene/Level1/letra6" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1/spotLetra" to="LevelScene/Level1/letra" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level1/spotLetra" to="LevelScene/Level1/letra2" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1/spotLetra" to="LevelScene/Level1/letra4" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra" to="LevelScene/Level1/letra6" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level1/spotLetra" to="LevelScene/Level1/letra5" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1/spotLetra2" to="LevelScene/Level1/letra3" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1/spotLetra2" to="LevelScene/Level1/letra6" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1/spotLetra2" to="LevelScene/Level1/letra" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra" to="LevelScene/Level1/letra" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra" to="LevelScene/Level1/letra4" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra" to="LevelScene/Level1/letra3" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level1/spotLetra2" to="LevelScene/Level1/letra2" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1/spotLetra2" to="LevelScene/Level1/letra4" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra2" to="LevelScene/Level1/letra6" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level1/spotLetra2" to="LevelScene/Level1/letra5" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1/spotLetra3" to="LevelScene/Level1/letra3" method="_on_spotLetra3_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1/spotLetra3" to="LevelScene/Level1/letra6" method="_on_spotLetra3_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1/spotLetra3" to="LevelScene/Level1/letra" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra2" to="LevelScene/Level1/letra" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra2" to="LevelScene/Level1/letra4" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra2" to="LevelScene/Level1/letra3" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level1/spotLetra3" to="LevelScene/Level1/letra2" method="_on_spotLetra3_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1/spotLetra3" to="LevelScene/Level1/letra4" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra3" to="LevelScene/Level1/letra6" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level1/spotLetra3" to="LevelScene/Level1/letra5" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra3" to="LevelScene/Level1/letra" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra3" to="LevelScene/Level1/letra4" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1/spotLetra3" to="LevelScene/Level1/letra3" method="_on_spotLetra3_area_entered"]
 [connection signal="pressed" from="LevelScene/Level1Dificil/next2" to="." method="_on_next2_pressed"]
 [connection signal="input_event" from="LevelScene/Level1Dificil/letra" to="LevelScene/Level1Dificil/letra" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="LevelScene/Level1Dificil/letra2" to="LevelScene/Level1Dificil/letra2" method="_on_Area2D_input_event"]
@@ -1327,65 +1297,65 @@ texture = ExtResource( 45 )
 [connection signal="input_event" from="LevelScene/Level1Dificil/letra5" to="LevelScene/Level1Dificil/letra5" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="LevelScene/Level1Dificil/letra6" to="LevelScene/Level1Dificil/letra6" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="LevelScene/Level1Dificil/letra7" to="LevelScene/Level1Dificil/letra7" method="_on_Area2D_input_event"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra" to="LevelScene/Level1Dificil/letra7" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra" to="LevelScene/Level1Dificil/letra4" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra" to="LevelScene/Level1Dificil/letra3" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra" to="LevelScene/Level1Dificil/letra5" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra" to="LevelScene/Level1Dificil/letra6" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra" to="LevelScene/Level1Dificil/letra" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra" to="LevelScene/Level1Dificil/letra2" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra2" to="LevelScene/Level1Dificil/letra7" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra2" to="LevelScene/Level1Dificil/letra4" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra2" to="LevelScene/Level1Dificil/letra3" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra2" to="LevelScene/Level1Dificil/letra5" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra" to="LevelScene/Level1Dificil/letra4" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra" to="LevelScene/Level1Dificil/letra5" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra" to="LevelScene/Level1Dificil/letra3" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra" to="LevelScene/Level1Dificil/letra" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra" to="LevelScene/Level1Dificil/letra7" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra2" to="LevelScene/Level1Dificil/letra6" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra2" to="LevelScene/Level1Dificil/letra" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra2" to="LevelScene/Level1Dificil/letra2" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra3" to="LevelScene/Level1Dificil/letra7" method="_on_spotLetra3_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra3" to="LevelScene/Level1Dificil/letra4" method="_on_spotLetra3_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra3" to="LevelScene/Level1Dificil/letra3" method="_on_spotLetra3_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra3" to="LevelScene/Level1Dificil/letra5" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra2" to="LevelScene/Level1Dificil/letra4" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra2" to="LevelScene/Level1Dificil/letra5" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra2" to="LevelScene/Level1Dificil/letra3" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra2" to="LevelScene/Level1Dificil/letra" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra2" to="LevelScene/Level1Dificil/letra7" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra3" to="LevelScene/Level1Dificil/letra6" method="_on_spotLetra3_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra3" to="LevelScene/Level1Dificil/letra" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra3" to="LevelScene/Level1Dificil/letra2" method="_on_spotLetra3_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra4" to="LevelScene/Level1Dificil/letra7" method="_on_spotLetra4_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra4" to="LevelScene/Level1Dificil/letra4" method="_on_spotLetra4_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra4" to="LevelScene/Level1Dificil/letra3" method="_on_spotLetra4_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra4" to="LevelScene/Level1Dificil/letra5" method="_on_spotLetra4_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra3" to="LevelScene/Level1Dificil/letra4" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra3" to="LevelScene/Level1Dificil/letra5" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra3" to="LevelScene/Level1Dificil/letra3" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra3" to="LevelScene/Level1Dificil/letra" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra3" to="LevelScene/Level1Dificil/letra7" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra4" to="LevelScene/Level1Dificil/letra6" method="_on_spotLetra4_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra4" to="LevelScene/Level1Dificil/letra" method="_on_spotLetra4_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra4" to="LevelScene/Level1Dificil/letra2" method="_on_spotLetra4_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra5" to="LevelScene/Level1Dificil/letra7" method="_on_spotLetra5_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra5" to="LevelScene/Level1Dificil/letra4" method="_on_spotLetra5_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra5" to="LevelScene/Level1Dificil/letra3" method="_on_spotLetra5_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra5" to="LevelScene/Level1Dificil/letra5" method="_on_spotLetra5_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra4" to="LevelScene/Level1Dificil/letra4" method="_on_spotLetra4_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra4" to="LevelScene/Level1Dificil/letra5" method="_on_spotLetra4_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra4" to="LevelScene/Level1Dificil/letra3" method="_on_spotLetra4_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra4" to="LevelScene/Level1Dificil/letra" method="_on_spotLetra4_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra4" to="LevelScene/Level1Dificil/letra7" method="_on_spotLetra4_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra5" to="LevelScene/Level1Dificil/letra6" method="_on_spotLetra5_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra5" to="LevelScene/Level1Dificil/letra" method="_on_spotLetra5_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra5" to="LevelScene/Level1Dificil/letra2" method="_on_spotLetra5_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra5" to="LevelScene/Level1Dificil/letra4" method="_on_spotLetra5_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra5" to="LevelScene/Level1Dificil/letra5" method="_on_spotLetra5_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra5" to="LevelScene/Level1Dificil/letra3" method="_on_spotLetra5_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra5" to="LevelScene/Level1Dificil/letra" method="_on_spotLetra5_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level1Dificil/spotLetra5" to="LevelScene/Level1Dificil/letra7" method="_on_spotLetra5_area_entered"]
 [connection signal="input_event" from="LevelScene/Level2/letra" to="LevelScene/Level2/letra" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="LevelScene/Level2/letra2" to="LevelScene/Level2/letra2" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="LevelScene/Level2/letra3" to="LevelScene/Level2/letra3" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="LevelScene/Level2/letra4" to="LevelScene/Level2/letra4" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="LevelScene/Level2/letra5" to="LevelScene/Level2/letra5" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="LevelScene/Level2/letra6" to="LevelScene/Level2/letra6" method="_on_Area2D_input_event"]
-[connection signal="area_entered" from="LevelScene/Level2/spotLetra" to="LevelScene/Level2/letra6" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level2/spotLetra" to="LevelScene/Level2/letra" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2/spotLetra" to="LevelScene/Level2/letra2" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level2/spotLetra" to="LevelScene/Level2/letra4" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2/spotLetra" to="LevelScene/Level2/letra" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2/spotLetra" to="LevelScene/Level2/letra5" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2/spotLetra" to="LevelScene/Level2/letra3" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level2/spotLetra2" to="LevelScene/Level2/letra6" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level2/spotLetra2" to="LevelScene/Level2/letra" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2/spotLetra" to="LevelScene/Level2/letra6" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2/spotLetra" to="LevelScene/Level2/letra4" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2/spotLetra2" to="LevelScene/Level2/letra2" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level2/spotLetra2" to="LevelScene/Level2/letra4" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2/spotLetra2" to="LevelScene/Level2/letra" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2/spotLetra2" to="LevelScene/Level2/letra5" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2/spotLetra2" to="LevelScene/Level2/letra3" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level2/spotLetra3" to="LevelScene/Level2/letra6" method="_on_spotLetra3_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level2/spotLetra3" to="LevelScene/Level2/letra" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2/spotLetra2" to="LevelScene/Level2/letra6" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2/spotLetra2" to="LevelScene/Level2/letra4" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2/spotLetra3" to="LevelScene/Level2/letra2" method="_on_spotLetra3_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level2/spotLetra3" to="LevelScene/Level2/letra4" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2/spotLetra3" to="LevelScene/Level2/letra" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2/spotLetra3" to="LevelScene/Level2/letra5" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2/spotLetra3" to="LevelScene/Level2/letra3" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2/spotLetra3" to="LevelScene/Level2/letra6" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2/spotLetra3" to="LevelScene/Level2/letra4" method="_on_spotLetra3_area_entered"]
 [connection signal="pressed" from="LevelScene/Level2/next3" to="." method="_on_next3_pressed"]
 [connection signal="pressed" from="LevelScene/Level2Dificil/next4" to="." method="_on_next4_pressed"]
 [connection signal="input_event" from="LevelScene/Level2Dificil/letra" to="LevelScene/Level2Dificil/letra" method="_on_Area2D_input_event"]
@@ -1397,39 +1367,39 @@ texture = ExtResource( 45 )
 [connection signal="input_event" from="LevelScene/Level2Dificil/letra7" to="LevelScene/Level2Dificil/letra7" method="_on_Area2D_input_event"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra" to="LevelScene/Level2Dificil/letra" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra" to="LevelScene/Level2Dificil/letra2" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra" to="LevelScene/Level2Dificil/letra3" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra" to="LevelScene/Level2Dificil/letra4" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra" to="LevelScene/Level2Dificil/letra7" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra" to="LevelScene/Level2Dificil/letra5" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra" to="LevelScene/Level2Dificil/letra6" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra" to="LevelScene/Level2Dificil/letra7" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra" to="LevelScene/Level2Dificil/letra3" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra2" to="LevelScene/Level2Dificil/letra" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra2" to="LevelScene/Level2Dificil/letra2" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra2" to="LevelScene/Level2Dificil/letra3" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra2" to="LevelScene/Level2Dificil/letra4" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra2" to="LevelScene/Level2Dificil/letra7" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra2" to="LevelScene/Level2Dificil/letra5" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra2" to="LevelScene/Level2Dificil/letra6" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra2" to="LevelScene/Level2Dificil/letra7" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra2" to="LevelScene/Level2Dificil/letra3" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra3" to="LevelScene/Level2Dificil/letra" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra3" to="LevelScene/Level2Dificil/letra2" method="_on_spotLetra3_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra3" to="LevelScene/Level2Dificil/letra3" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra3" to="LevelScene/Level2Dificil/letra4" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra3" to="LevelScene/Level2Dificil/letra7" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra3" to="LevelScene/Level2Dificil/letra5" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra3" to="LevelScene/Level2Dificil/letra6" method="_on_spotLetra3_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra3" to="LevelScene/Level2Dificil/letra7" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra3" to="LevelScene/Level2Dificil/letra3" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra4" to="LevelScene/Level2Dificil/letra" method="_on_spotLetra4_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra4" to="LevelScene/Level2Dificil/letra2" method="_on_spotLetra4_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra4" to="LevelScene/Level2Dificil/letra3" method="_on_spotLetra4_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra4" to="LevelScene/Level2Dificil/letra4" method="_on_spotLetra4_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra4" to="LevelScene/Level2Dificil/letra7" method="_on_spotLetra4_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra4" to="LevelScene/Level2Dificil/letra5" method="_on_spotLetra4_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra4" to="LevelScene/Level2Dificil/letra6" method="_on_spotLetra4_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra4" to="LevelScene/Level2Dificil/letra7" method="_on_spotLetra4_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra4" to="LevelScene/Level2Dificil/letra3" method="_on_spotLetra4_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra5" to="LevelScene/Level2Dificil/letra" method="_on_spotLetra5_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra5" to="LevelScene/Level2Dificil/letra2" method="_on_spotLetra5_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra5" to="LevelScene/Level2Dificil/letra3" method="_on_spotLetra5_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra5" to="LevelScene/Level2Dificil/letra4" method="_on_spotLetra5_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra5" to="LevelScene/Level2Dificil/letra7" method="_on_spotLetra5_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra5" to="LevelScene/Level2Dificil/letra5" method="_on_spotLetra5_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra5" to="LevelScene/Level2Dificil/letra6" method="_on_spotLetra5_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra5" to="LevelScene/Level2Dificil/letra7" method="_on_spotLetra5_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level2Dificil/spotLetra5" to="LevelScene/Level2Dificil/letra3" method="_on_spotLetra5_area_entered"]
 [connection signal="pressed" from="LevelScene/Level3/next5" to="." method="_on_next5_pressed"]
 [connection signal="input_event" from="LevelScene/Level3/letra" to="LevelScene/Level3/letra" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="LevelScene/Level3/letra2" to="LevelScene/Level3/letra2" method="_on_Area2D_input_event"]
@@ -1439,26 +1409,26 @@ texture = ExtResource( 45 )
 [connection signal="input_event" from="LevelScene/Level3/letra6" to="LevelScene/Level3/letra6" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="LevelScene/Level3/letra7" to="LevelScene/Level3/letra7" method="_on_Area2D_input_event"]
 [connection signal="area_entered" from="LevelScene/Level3/spotLetra" to="LevelScene/Level3/letra6" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3/spotLetra" to="LevelScene/Level3/letra2" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3/spotLetra" to="LevelScene/Level3/letra5" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3/spotLetra" to="LevelScene/Level3/letra7" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3/spotLetra" to="LevelScene/Level3/letra" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3/spotLetra" to="LevelScene/Level3/letra2" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3/spotLetra" to="LevelScene/Level3/letra3" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3/spotLetra" to="LevelScene/Level3/letra7" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3/spotLetra" to="LevelScene/Level3/letra4" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3/spotLetra" to="LevelScene/Level3/letra5" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3/spotLetra2" to="LevelScene/Level3/letra6" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3/spotLetra2" to="LevelScene/Level3/letra2" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3/spotLetra2" to="LevelScene/Level3/letra5" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3/spotLetra2" to="LevelScene/Level3/letra7" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3/spotLetra2" to="LevelScene/Level3/letra" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3/spotLetra2" to="LevelScene/Level3/letra2" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3/spotLetra2" to="LevelScene/Level3/letra3" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3/spotLetra2" to="LevelScene/Level3/letra7" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3/spotLetra2" to="LevelScene/Level3/letra4" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3/spotLetra2" to="LevelScene/Level3/letra5" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3/spotLetra3" to="LevelScene/Level3/letra6" method="_on_spotLetra3_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3/spotLetra3" to="LevelScene/Level3/letra2" method="_on_spotLetra3_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3/spotLetra3" to="LevelScene/Level3/letra5" method="_on_spotLetra3_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3/spotLetra3" to="LevelScene/Level3/letra7" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3/spotLetra3" to="LevelScene/Level3/letra" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3/spotLetra3" to="LevelScene/Level3/letra2" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3/spotLetra3" to="LevelScene/Level3/letra3" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3/spotLetra3" to="LevelScene/Level3/letra7" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3/spotLetra3" to="LevelScene/Level3/letra4" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3/spotLetra3" to="LevelScene/Level3/letra5" method="_on_spotLetra3_area_entered"]
 [connection signal="pressed" from="LevelScene/Level3Dificil/next6" to="." method="_on_next6_pressed"]
 [connection signal="input_event" from="LevelScene/Level3Dificil/letra" to="LevelScene/Level3Dificil/letra" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="LevelScene/Level3Dificil/letra2" to="LevelScene/Level3Dificil/letra2" method="_on_Area2D_input_event"]
@@ -1470,47 +1440,47 @@ texture = ExtResource( 45 )
 [connection signal="input_event" from="LevelScene/Level3Dificil/letra8" to="LevelScene/Level3Dificil/letra8" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="LevelScene/Level3Dificil/letra9" to="LevelScene/Level3Dificil/letra9" method="_on_Area2D_input_event"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra" to="LevelScene/Level3Dificil/letra" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra" to="LevelScene/Level3Dificil/letra3" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra" to="LevelScene/Level3Dificil/letra2" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra" to="LevelScene/Level3Dificil/letra4" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra" to="LevelScene/Level3Dificil/letra3" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra" to="LevelScene/Level3Dificil/letra7" method="_on_spotLetra_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra" to="LevelScene/Level3Dificil/letra8" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra" to="LevelScene/Level3Dificil/letra5" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra" to="LevelScene/Level3Dificil/letra8" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra" to="LevelScene/Level3Dificil/letra6" method="_on_spotLetra_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra" to="LevelScene/Level3Dificil/letra4" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra" to="LevelScene/Level3Dificil/letra9" method="_on_spotLetra_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra2" to="LevelScene/Level3Dificil/letra" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra2" to="LevelScene/Level3Dificil/letra3" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra2" to="LevelScene/Level3Dificil/letra2" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra2" to="LevelScene/Level3Dificil/letra4" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra2" to="LevelScene/Level3Dificil/letra3" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra2" to="LevelScene/Level3Dificil/letra7" method="_on_spotLetra2_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra2" to="LevelScene/Level3Dificil/letra8" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra2" to="LevelScene/Level3Dificil/letra5" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra2" to="LevelScene/Level3Dificil/letra8" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra2" to="LevelScene/Level3Dificil/letra6" method="_on_spotLetra2_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra2" to="LevelScene/Level3Dificil/letra4" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra2" to="LevelScene/Level3Dificil/letra9" method="_on_spotLetra2_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra3" to="LevelScene/Level3Dificil/letra" method="_on_spotLetra3_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra3" to="LevelScene/Level3Dificil/letra3" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra3" to="LevelScene/Level3Dificil/letra2" method="_on_spotLetra3_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra3" to="LevelScene/Level3Dificil/letra4" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra3" to="LevelScene/Level3Dificil/letra3" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra3" to="LevelScene/Level3Dificil/letra7" method="_on_spotLetra3_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra3" to="LevelScene/Level3Dificil/letra8" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra3" to="LevelScene/Level3Dificil/letra5" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra3" to="LevelScene/Level3Dificil/letra8" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra3" to="LevelScene/Level3Dificil/letra6" method="_on_spotLetra3_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra3" to="LevelScene/Level3Dificil/letra4" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra3" to="LevelScene/Level3Dificil/letra9" method="_on_spotLetra3_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra4" to="LevelScene/Level3Dificil/letra" method="_on_spotLetra4_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra4" to="LevelScene/Level3Dificil/letra3" method="_on_spotLetra4_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra4" to="LevelScene/Level3Dificil/letra2" method="_on_spotLetra4_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra4" to="LevelScene/Level3Dificil/letra4" method="_on_spotLetra4_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra4" to="LevelScene/Level3Dificil/letra3" method="_on_spotLetra4_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra4" to="LevelScene/Level3Dificil/letra7" method="_on_spotLetra4_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra4" to="LevelScene/Level3Dificil/letra8" method="_on_spotLetra4_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra4" to="LevelScene/Level3Dificil/letra5" method="_on_spotLetra4_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra4" to="LevelScene/Level3Dificil/letra8" method="_on_spotLetra4_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra4" to="LevelScene/Level3Dificil/letra6" method="_on_spotLetra4_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra4" to="LevelScene/Level3Dificil/letra4" method="_on_spotLetra4_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra4" to="LevelScene/Level3Dificil/letra9" method="_on_spotLetra4_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra5" to="LevelScene/Level3Dificil/letra" method="_on_spotLetra5_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra5" to="LevelScene/Level3Dificil/letra3" method="_on_spotLetra5_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra5" to="LevelScene/Level3Dificil/letra2" method="_on_spotLetra5_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra5" to="LevelScene/Level3Dificil/letra4" method="_on_spotLetra5_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra5" to="LevelScene/Level3Dificil/letra3" method="_on_spotLetra5_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra5" to="LevelScene/Level3Dificil/letra7" method="_on_spotLetra5_area_entered"]
-[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra5" to="LevelScene/Level3Dificil/letra8" method="_on_spotLetra5_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra5" to="LevelScene/Level3Dificil/letra5" method="_on_spotLetra5_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra5" to="LevelScene/Level3Dificil/letra8" method="_on_spotLetra5_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra5" to="LevelScene/Level3Dificil/letra6" method="_on_spotLetra5_area_entered"]
+[connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra5" to="LevelScene/Level3Dificil/letra4" method="_on_spotLetra5_area_entered"]
 [connection signal="area_entered" from="LevelScene/Level3Dificil/spotLetra5" to="LevelScene/Level3Dificil/letra9" method="_on_spotLetra5_area_entered"]
